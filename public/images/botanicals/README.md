@@ -1,0 +1,3 @@
+Generated with the built-in imagegen tool. Prompt: a coordinated 4 by 4 photography contact sheet of aloe, green tea, citrus, hyaluronic gel, niacinamide powder, tea tree, retinol serum, rosehip oil, chamomile, shea butter, squalane oil, green coffee, botanical laboratory, harvest hands, sustainable farm, recyclable skincare packaging. Bright stone surfaces, natural daylight, no typography. Individual cells exported as WebP website assets. Campaign imagery is illustrative.
+
+Laboratory-wide: built-in imagegen prompt: wide premium botanical laboratory photograph, glass beakers, leaf-filled petri dish, pipette with one clear drop, cut aloe vera, sharp glass and green textures. Bright white negative space at left, arranged subjects at right, warm daylight; no text or logos.

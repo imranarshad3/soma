@@ -1,0 +1,41 @@
+/* Restored collection-led homepage; shared cards and controls inherit the design system. */
+.home-restored .hero { position:relative; overflow:hidden; background:#fff; }
+.home-restored .hero-background { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.home-restored .hero-inner { position:relative; display:flex; align-items:center; min-height:39rem; padding-block:5rem; }
+.home-restored .hero-copy { width:48%; }
+.home-restored .hero-copy h1 { font-size:clamp(3.5rem,6.4vw,5.5rem); line-height:1.02; letter-spacing:-.035em; font-weight:500; margin:1rem 0 1.5rem; }
+.home-restored .hero-copy .lead { max-width:25rem; font-size:1.0625rem; color:var(--muted); line-height:1.8; }
+.home-restored .hero-actions { display:flex; flex-wrap:wrap; gap:1rem; margin-top:2rem; }
+.cat-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.25rem; }
+.cat-tile { position:relative; display:block; aspect-ratio:.95; overflow:hidden; border-radius:.65rem; }
+.cat-tile img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
+.cat-tile:hover img { transform:scale(1.04); }
+.cat-fade { position:absolute; inset:0; background:linear-gradient(0deg,#173e309c,transparent 50%); }
+.cat-name { position:absolute; left:1.25rem; bottom:1.5rem; font-size:1.0625rem; color:#fff; }
+.cat-go { position:absolute; right:1rem; bottom:1.25rem; display:grid; place-items:center; background:#fff; color:var(--forest); width:2.25rem; height:2.25rem; border-radius:50%; }
+.cat-tile:last-child img { object-position:80% center; }
+.chips { display:flex; flex-wrap:wrap; gap:.5rem; }
+.chip { padding:.6rem 1.25rem; background:#fff; border:1px solid var(--border); border-radius:2rem; font-size:.875rem; color:var(--forest); }
+.chip.on { background:var(--forest); color:#fff; }
+.home-restored .best { padding-top:0; }
+.power { border-block:1px solid var(--border); padding-block:var(--space-section); }
+.power-inner { display:grid; grid-template-columns:1fr .85fr 1.2fr; gap:2.5rem; align-items:center; }
+.power-copy h2,.results-copy h2 { font-size:clamp(2.25rem,3.5vw,3rem); line-height:1.1; font-weight:500; margin:0 0 1.5rem; }
+.power-copy p,.results-copy p { color:var(--muted); margin-bottom:1.75rem; line-height:1.8; }
+.power-list { list-style:none; margin:0; padding:0; display:grid; gap:1.5rem; }
+.power-list li { display:flex; gap:.875rem; align-items:center; }
+.power-list .pi { width:2.75rem; height:2.75rem; border-radius:50%; background:#f2f6ee; display:grid; place-items:center; color:var(--forest); flex-shrink:0; }
+.power-list b,.power-list small { display:block; font-size:.875rem; }
+.power-list small { color:var(--muted); margin-top:.25rem; }
+.power-art { height:21rem; overflow:hidden; border-radius:.75rem; }
+.power-art img { width:100%; height:100%; object-fit:cover; object-position:right; }
+.home-restored .results { background:#fff; }
+.home-restored .results-inner { display:grid; grid-template-columns:1.1fr 1fr 1fr; align-items:center; gap:2.5rem; padding-block:var(--space-section); }
+.results-portrait { height:23rem; border-radius:.75rem; overflow:hidden; }
+.results-portrait img { width:100%; height:100%; object-fit:cover; }
+.results-stages { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.75rem; }
+.results-stages figure { margin:0; }
+.results-stages img { width:100%; aspect-ratio:.7; object-fit:cover; border-radius:.5rem; }
+.results-stages figcaption { font-size:.75rem; text-align:center; margin-top:.5rem; }
+@media(max-width:1100px) { .power-inner { grid-template-columns:1fr 1fr; } .power-art { grid-column:1 / -1; } .home-restored .results-inner { grid-template-columns:1fr 1fr; } .results-stages { grid-column:1 / -1; } .results-stages img { aspect-ratio:1.5; } }
+@media(max-width:767px) { .home-restored .hero-inner { min-height:44rem; align-items:start; padding-top:2.5rem; padding-bottom:22rem; } .home-restored .hero-copy { width:100%; } .home-restored .hero-background { top:auto; bottom:0; height:22rem; object-position:right; } .home-restored .hero-copy h1 { font-size:3.5rem; } .cat-grid { grid-template-columns:1fr 1fr; gap:1rem; } .cat-name { font-size:.875rem; left:.75rem; bottom:3.5rem; } .cat-go { left:.75rem; right:auto; bottom:.75rem; } .power-inner,.home-restored .results-inner { grid-template-columns:1fr; gap:2rem; } .results-stages { grid-column:auto; } .home-restored .section-head { flex-wrap:wrap; } }
