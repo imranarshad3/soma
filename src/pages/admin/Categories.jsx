@@ -146,17 +146,20 @@ export default function Categories() {
       <section className="card admin-panel">
         <h2>Collections on the storefront</h2>
         <p className="sub">These categories appear as the shop filter rail and the home page category tiles.</p>
-        <div className="three-col">
-          {CATEGORIES.map((c) => (
-            <div className="collection-chip" key={c}>
-              <Layers size={17} />
-              <span>
-                <b>{c}</b>
-                <small>{products.filter((p) => p.category === c).length} products</small>
-              </span>
-              <PackageIcon size={15} />
-            </div>
-          ))}
+        <div className="three-col collection-chips">
+          {CATEGORIES.map((c) => {
+            const count = products.filter((p) => p.category === c).length
+            return (
+              <div className="collection-chip" key={c}>
+                <Layers size={17} />
+                <span>
+                  <b>{c}</b>
+                  <small>{count} {count === 1 ? 'product' : 'products'}</small>
+                </span>
+                <PackageIcon size={15} />
+              </div>
+            )
+          })}
         </div>
       </section>
     </>

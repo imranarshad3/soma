@@ -11,6 +11,8 @@ import './styles/footer-polish.css'
 import './styles/search-polish.css'
 import './styles/admin-premium.css'
 import './styles/storefront-luxury.css'
+import './styles/experience-system.css'
+import './styles/luxury-elevation.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -22,4 +24,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 )
 
-import './styles/experience-system.css'

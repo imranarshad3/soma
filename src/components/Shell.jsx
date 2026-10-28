@@ -187,7 +187,7 @@ export function Newsletter() {
       <div className="bg" aria-hidden="true" />
       <div className="container newsletter-inner">
         <div>
-          <h3>A little care, in your inbox.</h3>
+          <h3>A little care, in your <em>inbox</em>.</h3>
           <p>
             Product notes and simple rituals. Newsletter signup is being prepared.
           </p>
