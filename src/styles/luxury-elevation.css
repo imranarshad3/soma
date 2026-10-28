@@ -293,6 +293,71 @@ input[aria-invalid="true"] { animation:input-nudge .22s ease; }
 .article-aside .aside-note { box-shadow:0 .5rem 1.5rem #173e3008; }
 
 /* ============================================================
+   UNIFIED PAGE HERO SYSTEM — every inner page, one treatment:
+   full-height cover photographs with self-dissolving edges,
+   a single height + single display type scale
+   ============================================================ */
+main[data-client-route] .editorial-hero { background:#fff; }
+
+/* one height for the whole family; checkout stays a compact task page */
+main[data-client-route] .editorial-hero > .container {
+  min-height:clamp(34rem,38vw,42rem); padding-block:4.5rem;
+}
+main[data-client-route] .checkout-hero > .container { min-height:26rem; padding-block:3.25rem; }
+
+/* one display scale: previously 3 places with different clamps */
+main[data-client-route] .editorial-hero h1 {
+  font-size:clamp(3rem,4.7vw,4.5rem);
+  letter-spacing:-.038em; line-height:1.04; max-width:48%;
+}
+main[data-client-route] .editorial-hero .lead { max-width:38%; }
+main .checkout-hero .checkout-hero-copy { width:48%; }
+
+/* photographs: cover the full hero, dissolve their own left edge into
+   the copy region so no asset background tint or pixel seam shows */
+main .editorial-hero .editorial-hero-image {
+  inset:0 0 0 auto; width:min(100%,90rem); height:100%; margin:0;
+  border-radius:0; object-fit:cover; object-position:right center;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 30%);
+}
+main .journal-hero .editorial-hero-image { object-position:100% center; }
+main .ing-hero .editorial-hero-image { object-position:center 38%; }
+main .account-hero .editorial-hero-image { object-position:85% center; }
+main .contact-hero .editorial-hero-image { object-position:82% center; }
+main .about-hero .editorial-hero-image { object-position:center top; }
+/* her portrait's left contour melts into the copy wash, as her features sit clear by 64% */
+main .about-hero.editorial-hero::after {
+  background:linear-gradient(90deg,#fff 0%,#fff 24%,#fffffff2 36%,#ffffffc9 48%,#ffffff66 58%,#ffffff00 68%);
+}
+
+/* softer wipe: the mask does the dissolve, wash stays light for richer photos */
+main[data-client-route] .editorial-hero::after {
+  background:linear-gradient(90deg,#fff 0%,#fffffffa 22%,#ffffffd9 38%,#ffffff4d 55%,#ffffff00 66%);
+}
+/* journal sits on sage, so its wash must dissolve to sage, not white */
+main[data-client-route] .journal-hero.editorial-hero::after {
+  display:block;
+  background:linear-gradient(90deg,#f4f7f0 0%,#f4f7f0fa 22%,#f4f7f0d9 38%,#f4f7f04d 55%,#f4f7f000 66%);
+}
+
+/* mobile: photograph becomes a bottom band dissolving up into the copy */
+@media(max-width:767px) {
+  main[data-client-route] .editorial-hero > .container { min-height:0; padding:2.5rem 1.25rem 20.5rem; }
+  main .editorial-hero .editorial-hero-image {
+    inset:auto 0 0; width:100%; height:18.5rem;
+    object-position:center 34%;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 24%);
+    mask-image:linear-gradient(180deg,transparent 0,#000 24%);
+  }
+  main[data-client-route] .editorial-hero::after { display:none; }
+  main[data-client-route] .editorial-hero h1 { font-size:2.75rem; max-width:100%; }
+  main[data-client-route] .editorial-hero .lead { max-width:100%; }
+  main .checkout-hero > .container { padding-bottom:15.5rem; }
+  main .checkout-hero .editorial-hero-image { height:14rem; }
+}
+
+/* ============================================================
    PREMIUM PASS — finer typography, glass header, serif numerals,
    hushed uppercase button language, editorial depth
    ============================================================ */

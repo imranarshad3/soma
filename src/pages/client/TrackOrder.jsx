@@ -89,7 +89,7 @@ export default function TrackOrder() {
   return (
     <>
       <section className="track-hero editorial-hero">
-        <img className="editorial-hero-image" src="/images/hero-premium.webp" alt="SOMA organic skincare essentials" fetchpriority="high" />
+        <img className="editorial-hero-image" src="/images/night-premium.webp" alt="SOMA organic skincare essentials" fetchpriority="high" />
         <div className="track-hero-bg" aria-hidden="true" />
         <span className="script" aria-hidden="true">
           Pure

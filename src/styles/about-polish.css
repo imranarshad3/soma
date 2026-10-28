@@ -4,19 +4,16 @@ main .about-page h2 { font-family:var(--serif); font-size:clamp(2.5rem,3.8vw,3.7
 main .about-page h2 em,main .about-page h1 em { font-weight:400; }
 main .about-page .eyebrow { font-size:.6875rem; letter-spacing:.15em; color:#806b49; }
 main .about-page .about-hero { padding:0; background:#fff; border-bottom:1px solid #dce4d8; }
-main .about-page .about-hero-inner { display:grid; grid-template-columns:.85fr 1.15fr; align-items:center; gap:clamp(2.5rem,5vw,5rem); padding-block:3.5rem; min-height:38rem; }
-main .about-page .about-hero-copy { padding-block:1rem; }
-main .about-page .about-hero h1 { font-family:var(--serif); font-size:clamp(3.75rem,6.3vw,6rem); font-weight:500; line-height:1.02; letter-spacing:-.045em; margin:1.5rem 0 1.75rem; color:#203b2e; }
-main .about-page .about-hero .lead { max-width:26rem; font-size:1.0625rem; line-height:1.85; color:#5f6d61; margin-bottom:1.5rem; }
+main .about-page .about-hero-inner { display:block; min-height:clamp(34rem,38vw,42rem); padding-block:4.5rem; }
+main .about-page .about-hero-copy { width:46%; }
+main .about-page .about-hero h1 { font-family:var(--serif); font-size:clamp(3rem,4.7vw,4.5rem); font-weight:500; line-height:1.04; letter-spacing:-.038em; max-width:none; margin:1.25rem 0 1.5rem; color:#203b2e; }
+main .about-page .about-hero .lead { max-width:38%; font-size:1.0625rem; line-height:1.85; color:#5f6d61; margin-bottom:1.5rem; }
 main .about-page .about-hero .brand-text-link { display:inline-flex; min-height:2.75rem; margin-top:0; gap:1rem; }
 .about-hero-signature { display:flex; align-items:center; gap:.875rem; color:#5b7154; border-top:1px solid #dce4d8; margin-top:2.25rem; padding-top:1.25rem; max-width:22rem; }
 .about-hero-signature span { font-size:.75rem; line-height:1.7; }
-.about-hero-photo { margin:0; overflow:hidden; background:#f2f5f1; border-radius:.375rem; }
-.about-hero-photo img { width:100%; height:auto; display:block; }
-.about-hero-photo figcaption { display:flex; justify-content:space-between; gap:1rem; padding:1rem 1.25rem; border-top:1px solid #dce4d8; color:#4d624e; font-size:.625rem; letter-spacing:.09em; text-transform:uppercase; }
 main .about-page .about-manifesto { padding-block:clamp(3.5rem,6vw,6rem); border-bottom:1px solid #dce4d8; scroll-margin-top:7rem; }
 main .about-page .about-manifesto > .container { display:grid; grid-template-columns:1fr 2fr; gap:clamp(2rem,5vw,5rem); }
-.about-index { display:block; font-size:.6875rem; letter-spacing:.12em; color:#806b49; margin-bottom:1rem; }
+.about-index { display:block; font-size:.6875rem; letter-spacing:.15em; color:#806b49; margin-bottom:1rem; text-transform:uppercase; }
 main .about-page .about-manifesto .eyebrow { max-width:12rem; color:#5f6d61; font-size:.75rem; letter-spacing:.06em; }
 .about-manifesto h2 { margin-bottom:1.5rem !important; }
 .about-manifesto p:not(.eyebrow) { max-width:38rem; color:#5f6d61; line-height:1.9; font-size:1rem; }
@@ -61,19 +58,17 @@ main .about-page .about-invitation { padding-block:clamp(3.5rem,6vw,6rem); backg
 main .about-page .about-invitation h2 { font-size:clamp(2.75rem,4.5vw,4.5rem); margin:1.25rem 0 0; }
 .about-invitation .btn { border-radius:.375rem; flex-shrink:0; }
 @media(max-width:1000px) {
- main .about-page .about-hero-inner { grid-template-columns:.9fr 1.1fr; gap:2rem; min-height:34rem; padding-block:3rem; }
- main .about-page .about-hero h1 { font-size:4rem; }
- .about-hero-photo figcaption { flex-direction:column; gap:.375rem; }
+ main .about-page .about-hero-inner { min-height:34rem; padding-block:3rem; }
  .about-hero-signature { margin-top:1.5rem; }
  .about-principles > .container { grid-template-columns:1fr; gap:2.5rem; }
  .about-principles-heading { max-width:38rem; }
 }
 @media(max-width:767px) {
- main .about-page .about-hero-inner { grid-template-columns:minmax(0,1fr); gap:2rem; padding-block:2.5rem; min-height:0; }
- main .about-page .about-hero h1 { font-size:3.75rem; margin-block:1.25rem; }
- main .about-page .about-hero .lead { font-size:1rem; }
+ main .about-page .about-hero-inner { padding:2.5rem 1.25rem 20.5rem; min-height:0; }
+ main .about-page .about-hero-copy { width:100%; }
+ main .about-page .about-hero h1 { font-size:2.75rem; margin-block:1.25rem; }
+ main .about-page .about-hero .lead { font-size:1rem; max-width:100%; }
  .about-hero-signature { display:none; }
- .about-hero-photo figcaption { flex-direction:row; flex-wrap:wrap; padding:.875rem; }
  main .about-page .about-manifesto > .container,.about-product-story > .container { grid-template-columns:minmax(0,1fr); gap:2rem; }
  main .about-page h2 { font-size:2.5rem; }
  .about-botanical-grid { grid-template-columns:1fr 1fr; gap:1.75rem 1rem; }

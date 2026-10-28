@@ -31,7 +31,7 @@ export default function Wishlist() {
   return (
     <>
       <section className="wish-hero editorial-hero">
-        <img className="editorial-hero-image" src="/images/hero-premium.webp" alt="Your SOMA skincare essentials" fetchpriority="high" />
+        <img className="editorial-hero-image" src="/images/cleanser-premium.webp" alt="Your SOMA skincare essentials" fetchpriority="high" />
         <div className="wish-hero-bg" aria-hidden="true" />
         <span className="script" aria-hidden="true">
           Glow

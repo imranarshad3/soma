@@ -23,7 +23,7 @@ export default function Contact() {
   return (
     <>
       <section className="contact-hero editorial-hero">
-        <img className="editorial-hero-image" src="/images/hero-premium.webp" alt="The SOMA organic skincare collection" fetchpriority="high" />
+        <img className="editorial-hero-image" src="/images/hero-premium.webp" alt="SOMA organic skincare collection" fetchpriority="high" />
         <div className="contact-hero-bg" aria-hidden="true" />
         <div className="container">
           <p className="eyebrow">Get In Touch</p>
